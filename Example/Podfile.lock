@@ -1,0 +1,23 @@
+PODS:
+  - CCBanner (1.0.0)
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - CCBanner (from `../`)
+  - Masonry (~> 1.1.0)
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+
+EXTERNAL SOURCES:
+  CCBanner:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CCBanner: 0be4a6b38ac153e0a2b15251c6ba0419ef274e4c
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: 6683eccab4771ab653037c8c5b21b4b321924e6f
+
+COCOAPODS: 1.10.0
