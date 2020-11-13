@@ -5,27 +5,39 @@
 [![License](https://img.shields.io/cocoapods/l/CCBanner.svg?style=flat)](https://cocoapods.org/pods/CCBanner)
 [![Platform](https://img.shields.io/cocoapods/p/CCBanner.svg?style=flat)](https://cocoapods.org/pods/CCBanner)
 
-## Example
+基于**UICollectionView**实现的轮播控件，可**自定义**轮播内容，以及**重用机制**的使用。
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-CCBanner is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+## 安装
 
 ```ruby
 pod 'CCBanner', '~> 1.0.0'
 ```
+## 使用
+##### 创建对象
+```
+- (CCBanner *)banner {
+    if (_banner == nil) {
+        _banner = [[CCBanner alloc]init];
+        _banner.dataSource = self;
+        _banner.delegate = self;
+        [_banner registerClass:[BannerCell class] reuseIdentifier:@"BannerCell"];
+    }
+    return _banner;
+}
+```
+##### 实现代理
+```
+- (NSInteger)numberOfItems {
+    return 3;
+}
 
-## Author
+- (__kindof UICollectionViewCell *)banner:(CCBanner *)banner itemAtIndex:(NSInteger)index {
+    BannerCell *cell = [banner dequeueReusableItemWithIdentifier:@"BannerCell" forIndex:index];
+    cell.data = [NSString stringWithFormat:@"%ld",index];
+    return cell;
+}
 
-CaiChenghan, 1178752402@qq.com
+```
 
-## License
-
-CCBanner is available under the MIT license. See the LICENSE file for more info.
 
 
