@@ -11,6 +11,8 @@
 
 @interface BannerCell ()
 
+@property (nonatomic, strong) UILabel *textLab;
+
 @end
 
 @implementation BannerCell
@@ -18,12 +20,11 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        /// 自定义内容
+        [self initialView];
+        [self makeConstraints];
     }
     return self;
 }
-
-@end
 
 - (void)initialView {
     [self.contentView addSubview:self.textLab];
