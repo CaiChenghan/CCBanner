@@ -38,6 +38,25 @@ pod 'CCBanner', '~> 1.0.0'
 }
 
 ```
+##### 自定义轮播内容
+```
+/// 自定义轮播cell
+@interface BannerCell ()
+
+@end
+
+@implementation BannerCell
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        /// 自定义cell内容
+    }
+    return self;
+}
+
+@end
+```
 
 
 
