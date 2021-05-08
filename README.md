@@ -5,6 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/CCBanner.svg?style=flat)](https://cocoapods.org/pods/CCBanner)
 [![Platform](https://img.shields.io/cocoapods/p/CCBanner.svg?style=flat)](https://cocoapods.org/pods/CCBanner)
 
+
 基于**UICollectionView**实现的轮播控件，可**无限循环**、**自定义**轮播内容，以及对**重用机制**的使用。
 
 ## 安装
